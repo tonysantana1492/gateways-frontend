@@ -113,7 +113,7 @@ const AddPeripheralForm = (props) => {
               data-cy="addpPeripheralFormBtn"
               data-testid="addpPeripheralFormBtn"
               className="w-20 disabled:bg-gray-200 bg-blue hover:bg-blue text-gray-50"
-              aria-label="SAVE"
+              aria-label="Add"
               disabled={
                 dirtyFields.length === 0 || !isValid || isLoadingNewPeripheral
               }
