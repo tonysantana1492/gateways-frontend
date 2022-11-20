@@ -46,6 +46,7 @@ const PeripheralItem = (props) => {
             <IconButton
               data-cy="deleteBtn"
               data-testid="deleteBtn"
+              
               onClick={deletePeripheral}
             >
               <Delete className="text-15" color="grey" />
