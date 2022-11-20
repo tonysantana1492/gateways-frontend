@@ -81,7 +81,7 @@ const DetailsGateway = () => {
   const getGateway = useCallback(() => {
     detailsGatewayRequest(`api/gateways/${idGateway}/peripherals`, "GET").then(
       (response) => {
-        // Load the values on the form
+        // Load the values on the form by default
         if (response) {
           setValue("serial", response.serial, {
             shouldDirty: true,
