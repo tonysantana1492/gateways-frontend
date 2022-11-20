@@ -2,6 +2,10 @@
 
 This is a project that allows the storage, creation, update and deletion of gateway devices. It uses mongoBD as a database to store gateways and its associated peripherals. It is made with MUI and TailwindCSS for visual components.
 
+### Prerequisites
+You need create a .env file that contains the variable:
+REACT_APP_API: Backend url for the aplication.
+
 ## Getting Started
 To get you started you can simply clone the repository:
 
@@ -60,6 +64,4 @@ npx cypress open
 
 "**/src/utils**": Contains custom hook for http request and constant definitions.
 
-"**src/styles**": Contains components individual styles.
-
-"**src**": Contains the global styles of the application, the main routing and the store to store the global states.
+"**src/styles**": Contains components styles.
