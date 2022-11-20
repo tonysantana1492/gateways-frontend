@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from "react";
-import { TextField, Button, Typography } from "@mui/material";
+import { TextField, Button, Typography, CircularProgress } from "@mui/material";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { Controller, useForm } from "react-hook-form";
 import * as yup from "yup";
@@ -214,7 +214,7 @@ const DetailsGateway = () => {
           <div className="flex justify-end w-full">
             <Button
               type="submit"
-              className="w-20 disabled:bg-gray-200 bg-blue hover:bg-blue text-gray-50"
+              className="h-28 disabled:bg-gray-200 bg-blue hover:bg-blue text-gray-50"
               data-cy="saveBtn"
               data-testid="saveBtn"
               aria-label="SAVE"
@@ -223,7 +223,7 @@ const DetailsGateway = () => {
               }
               value="saveBtn"
             >
-              {isLoadingEditGateway ? "Loading..." : "Save"}
+              {isLoadingEditGateway ? <CircularProgress size={24} className='w-10 text-blue' /> : "Save"}
             </Button>
           </div>
         </form>

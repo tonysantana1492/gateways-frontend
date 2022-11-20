@@ -5,6 +5,7 @@ import {
   Stack,
   Typography,
   Switch,
+  CircularProgress,
 } from "@mui/material";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { Controller, useForm } from "react-hook-form";
@@ -103,6 +104,7 @@ const AddPeripheralForm = (props) => {
               data-testid="cancelBtn"
               color="primary"
               aria-label="Cancel"
+              className="h-28"
               value="cancelBtn"
               onClick={handlerCancelAddPeripheral}
             >
@@ -112,14 +114,14 @@ const AddPeripheralForm = (props) => {
               type="submit"
               data-cy="addpPeripheralFormBtn"
               data-testid="addpPeripheralFormBtn"
-              className="w-20 disabled:bg-gray-200 bg-blue hover:bg-blue text-gray-50"
+              className="h-28 disabled:bg-gray-200 bg-blue hover:bg-blue text-gray-50"
               aria-label="Add"
               disabled={
                 dirtyFields.length === 0 || !isValid || isLoadingNewPeripheral
               }
               value="addpPeripheralBtn"
             >
-              {isLoadingNewPeripheral ? "Loading..." : "Save"}
+              {isLoadingNewPeripheral ? <CircularProgress size={24} className='w-10 text-blue' /> : "Add"}
             </Button>
           </div>
         </div>
