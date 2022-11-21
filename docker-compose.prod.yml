@@ -1,0 +1,8 @@
+version: "3.8"
+
+services:
+  app:
+    container_name: gateway-frontend-prod
+    image: gateway-frontend-prod
+    build:
+      target: production
